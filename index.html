@@ -1,147 +1,156 @@
+Here is the complete, corrected code for your **`index.html`** file.
+
+I have made two specific fixes:
+
+1. **Fixed the Footer Link:** Changed `Contact.html` to `contact.html` (lowercase) so the link works.
+2. **Fixed the "Let's Talk" Button:** Converted the button into a link so clicking it actually takes you to the contact page.
+
+You can copy and paste this entire block to replace your current file.
+
+```html
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
+<html class="dark" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Golden Hour Studio Home</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Playfair+Display:wght@700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#FFC107",
-                        "background-light": "#f8f8f5",
-                        "background-dark": "#2A2826",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"],
-                        "nav": ["Plus Jakarta Sans", "sans-serif"], 
-                        "serif": ["Playfair Display", "serif"],
-                        "mono": ["JetBrains Mono", "monospace"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                    boxShadow: {
-                        'glow': '0 0 15px -3px rgba(255, 193, 7, 0.4)',
-                        'bloom': '0 0 25px 2px rgba(255, 193, 7, 0.5)',
-                        'nav-hover': '0 0 12px 2px rgba(255, 193, 7, 0.4)',
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#FFC107",
+                    "background-light": "#f8f8f5",
+                    "background-dark": "#2A2826",
                 },
+                fontFamily: {
+                    "display": ["Plus Jakarta Sans", "sans-serif"],
+                    "nav": ["Plus Jakarta Sans", "sans-serif"], 
+                    "serif": ["Playfair Display", "serif"],
+                    "mono": ["JetBrains Mono", "monospace"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+                },
+                boxShadow: {
+                    'glow': '0 0 15px -3px rgba(255, 193, 7, 0.4)',
+                    'bloom': '0 0 25px 2px rgba(255, 193, 7, 0.5)',
+                    'nav-hover': '0 0 12px 2px rgba(255, 193, 7, 0.4)',
+                }
             },
-        }
-    </script>
-<style type="text/tailwindcss">
-        .arch-mask {
-            border-top-left-radius: 1000px;
-            border-top-right-radius: 1000px;
-        }
-        .bloom-effect:hover {
-            box-shadow: 0 0 20px 2px rgba(255, 193, 7, 0.6);
-        }
-        .nav-item-hover:hover {
-            color: #FFC107;
-            text-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
-        }
-        .code-syntax-string { color: #FFC107; }
-        .code-syntax-keyword { color: #d4d4d4; font-weight: bold; }
-        .code-syntax-comment { color: #6a6a6a; }
-        body {
-            min-height: max(884px, 100dvh);
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
+        },
     }
-  </style>
-  </head>
+</script>
+<style type="text/tailwindcss">
+    .arch-mask {
+        border-top-left-radius: 1000px;
+        border-top-right-radius: 1000px;
+    }
+    .bloom-effect:hover {
+        box-shadow: 0 0 20px 2px rgba(255, 193, 7, 0.6);
+    }
+    .nav-item-hover:hover {
+        color: #FFC107;
+        text-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
+    }
+    .code-syntax-string { color: #FFC107; }
+    .code-syntax-keyword { color: #d4d4d4; font-weight: bold; }
+    .code-syntax-comment { color: #6a6a6a; }
+    body {
+        min-height: max(884px, 100dvh);
+    }
+</style>
+</head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
+
 <nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
-<div class="flex items-center justify-between px-4 py-4 max-w-7xl mx-auto">
-<div class="flex items-center gap-2 shrink-0">
-<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-glow">
-<span class="material-symbols-outlined text-base font-bold">flare</span>
-</div>
-<h2 class="text-lg font-bold tracking-tight">MVR</h2>
-</div>
-<div class="flex items-center gap-4 md:gap-8 ml-auto">
-    <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="index.html">Portfolio</a>
-    
-    <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="index.html#skills">Skills</a>
-    
-    <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="about.html">About</a>
-    
-    <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="contact.html">Contact</a>
-</div>
+    <div class="flex items-center justify-between px-4 py-4 max-w-7xl mx-auto">
+        <div class="flex items-center gap-2 shrink-0">
+            <div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-glow">
+                <span class="material-symbols-outlined text-base font-bold">flare</span>
+            </div>
+            <h2 class="text-lg font-bold tracking-tight">MVR</h2>
+        </div>
+        <div class="flex items-center gap-4 md:gap-8 ml-auto">
+            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="index.html">Portfolio</a>
+            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="index.html#skills">Skills</a>
+            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="about.html">About</a>
+            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="contact.html">Contact</a>
+        </div>
+    </div>
 </nav>
+
 <section class="relative px-6 pt-8 pb-16 flex flex-col items-center overflow-hidden">
-<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10"></div>
-<div class="arch-mask w-full max-w-xs aspect-[4/5] bg-cover bg-center border-4 border-primary/30 shadow-glow mb-10 overflow-hidden relative" style='background-image: linear-gradient(to bottom, rgba(42, 40, 38, 0.4), rgba(42, 40, 38, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtEY59hqSEqCpw301JCG86g0xAzhVgHxGMkhNrcPtMxTnR_x5EcePZA3Z5eqOQ2n6kMdEQA_u420u6B7Gig8OFG1O6H01ChiBH7bKW1f8tlheJRvoIZk7mf9WHFLJiYOnGZ3MpaqOPwsYBOkKKsaxTJk6DlieMFUvgmuAGtiQKzuTmNWOFOnPnQjpe3uEmA4NJrtEjp6k6RaE3Tlxl9JzEY0_zVYW_CW9G6I1LSLWNy-U9wFjtjz1_u1ZLRba6vJNmptrZnLuCrMQ");'>
-<div class="absolute inset-0 flex flex-col items-center justify-end p-8 text-center">
-<span class="text-xs uppercase tracking-[0.3em] text-primary mb-2 font-bold">Marybell Venezia Rios</span>
-</div>
-</div>
-<div class="text-center space-y-4 max-w-sm">
-<h1 class="font-serif text-5xl md:text-6xl text-white leading-[1.1]">
-                User Experience Engineer
-            </h1>
-<p class="text-slate-400 text-lg leading-relaxed">
-                Crafting digital experiences at the intersection of <span class="text-primary font-semibold">UX</span>, <span class="text-primary font-semibold">3D</span>, and <span class="text-primary font-semibold">Code</span>.
-            </p>
-</div>
-<div class="mt-10 flex gap-4">
-<button class="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg shadow-bloom hover:scale-[1.02] transition-transform">
-                View Portfolio
-            </button>
-</div>
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -z-10"></div>
+    <div class="arch-mask w-full max-w-xs aspect-[4/5] bg-cover bg-center border-4 border-primary/30 shadow-glow mb-10 overflow-hidden relative" style='background-image: linear-gradient(to bottom, rgba(42, 40, 38, 0.4), rgba(42, 40, 38, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtEY59hqSEqCpw301JCG86g0xAzhVgHxGMkhNrcPtMxTnR_x5EcePZA3Z5eqOQ2n6kMdEQA_u420u6B7Gig8OFG1O6H01ChiBH7bKW1f8tlheJRvoIZk7mf9WHFLJiYOnGZ3MpaqOPwsYBOkKKsaxTJk6DlieMFUvgmuAGtiQKzuTmNWOFOnPnQjpe3uEmA4NJrtEjp6k6RaE3Tlxl9JzEY0_zVYW_CW9G6I1LSLWNy-U9wFjtjz1_u1ZLRba6vJNmptrZnLuCrMQ");'>
+        <div class="absolute inset-0 flex flex-col items-center justify-end p-8 text-center">
+            <span class="text-xs uppercase tracking-[0.3em] text-primary mb-2 font-bold">Marybell Venezia Rios</span>
+        </div>
+    </div>
+    <div class="text-center space-y-4 max-w-sm">
+        <h1 class="font-serif text-5xl md:text-6xl text-white leading-[1.1]">
+            User Experience Engineer
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+            Crafting digital experiences at the intersection of <span class="text-primary font-semibold">UX</span>, <span class="text-primary font-semibold">3D</span>, and <span class="text-primary font-semibold">Code</span>.
+        </p>
+    </div>
+    <div class="mt-10 flex gap-4">
+        <a href="#portfolio" class="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg shadow-bloom hover:scale-[1.02] transition-transform inline-block">
+            View Portfolio
+        </a>
+    </div>
 </section>
+
 <div class="px-6 flex items-center justify-between mb-2">
-<h3 class="text-primary text-sm font-bold uppercase tracking-[0.2em]">Selected Works</h3>
-<div class="h-[1px] flex-1 bg-primary/20 ml-4"></div>
+    <h3 class="text-primary text-sm font-bold uppercase tracking-[0.2em]">Selected Works</h3>
+    <div class="h-[1px] flex-1 bg-primary/20 ml-4"></div>
 </div>
+
 <section class="p-6 grid grid-cols-2 gap-4" id="portfolio">
-<div class="col-span-2 group">
-<div class="relative rounded-xl overflow-hidden border-2 border-primary/20 hover:border-primary transition-all duration-500 shadow-glow aspect-[16/9]" style='background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBc4qA1_3sBxs4Ud7cxAxjP54dPbUaf11RQlqVJi_fZgMWtcgQ9N88vFIP2CLlIz9wSO8-McOZGQwpnPtV1F49eEZtw7OxSLhEbMq4E_578qEuulLv_2mirypEc9RZKfcq8EaAe8OJ8GVNcQj6qUSKECtoFtlNE5wi_W1aMuS-IreThNO43anjSY2mD9kwNOnR5forxK1krrhBMqRRf5EGkWlITgaVM3W6x87Wrb9iFaOImJJLoDnQpoCBW58B24Xe8Fcih-8pbFWM"); background-size: cover;'>
-<div class="absolute bottom-0 left-0 p-6 w-full">
-<p class="text-xs font-bold text-primary mb-1 uppercase tracking-widest">UX ARCHITECTURE</p>
-<h4 class="text-2xl font-bold text-white mb-2">Fintech Flow</h4>
-<p class="text-slate-300 text-sm line-clamp-2">Optimizing digital banking through human-centered motion design and accessibility.</p>
-</div>
-</div>
-</div>
-<div class="col-span-1">
-<div class="arch-mask h-64 bg-cover bg-center border border-primary/30 flex flex-col justify-end p-4 group overflow-hidden" style='background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzME6L26ynCLM9KDBEAkpFAM8sxLl2qiiqflTIkHiGIR_glZd2NWvQgZBjpA8jlUGpk-XzyGRZVv9hhyJu6IIQztnXOlDOagHkffoWweFPRGF92gjT6so60M-sQ1M3rkG4JtWrhCqY4RnIFGC-YCqZ11cvdZ9W5nkysl5b_3crkSVjObAVD-oq07wnziRLWSCUCQz2l8WDDke_q29fOxSoLv9vJuki-n3zedm2MF6js6WGFBAkwLy9CRfxCFmlpaYUsdfSdAzTeyk");'>
-<p class="text-white text-xs font-bold leading-tight uppercase tracking-tighter">Brass Studies</p>
-<p class="text-primary text-[10px] font-mono">3D RENDERING</p>
-</div>
-</div>
-<div class="col-span-1">
-<div class="rounded-xl h-64 bg-cover bg-center border border-primary/30 flex flex-col justify-end p-4 overflow-hidden relative" style='background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNJ82-uaEJTYmX_3A2nyvXDdni9685Tkaqsn7EhMwjup2oyMny5YWE01kp7UcP6ssy2jARoav7tNjRe6jqVdKc-I3ki_IED_aGslJVYu-FJDe0TfGm8VrEqoxJ-rM0dBZf7_AuIDfUWvxfOlhx4tYKibhmjE9biz2a_RF8IzAs7F6TIbmF8KbPsYN4_OeFW7NC0qgOJWoBndAKB5NpGZRWmLZNIMBwMlIXGGbnw1Nc_4vJH_c-TzICHzOzgTemhi9_4lkYjtQebSg");'>
-<div class="absolute -top-10 -right-10 w-24 h-24 rounded-full border border-primary/40"></div>
-<p class="text-white text-xs font-bold leading-tight uppercase tracking-tighter">Brand Identity</p>
-<p class="text-primary text-[10px] font-mono">VISUAL DESIGN</p>
-</div>
-</div>
+    <div class="col-span-2 group">
+        <div class="relative rounded-xl overflow-hidden border-2 border-primary/20 hover:border-primary transition-all duration-500 shadow-glow aspect-[16/9]" style='background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBc4qA1_3sBxs4Ud7cxAxjP54dPbUaf11RQlqVJi_fZgMWtcgQ9N88vFIP2CLlIz9wSO8-McOZGQwpnPtV1F49eEZtw7OxSLhEbMq4E_578qEuulLv_2mirypEc9RZKfcq8EaAe8OJ8GVNcQj6qUSKECtoFtlNE5wi_W1aMuS-IreThNO43anjSY2mD9kwNOnR5forxK1krrhBMqRRf5EGkWlITgaVM3W6x87Wrb9iFaOImJJLoDnQpoCBW58B24Xe8Fcih-8pbFWM"); background-size: cover;'>
+            <div class="absolute bottom-0 left-0 p-6 w-full">
+                <p class="text-xs font-bold text-primary mb-1 uppercase tracking-widest">UX ARCHITECTURE</p>
+                <h4 class="text-2xl font-bold text-white mb-2">Fintech Flow</h4>
+                <p class="text-slate-300 text-sm line-clamp-2">Optimizing digital banking through human-centered motion design and accessibility.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="arch-mask h-64 bg-cover bg-center border border-primary/30 flex flex-col justify-end p-4 group overflow-hidden" style='background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzME6L26ynCLM9KDBEAkpFAM8sxLl2qiiqflTIkHiGIR_glZd2NWvQgZBjpA8jlUGpk-XzyGRZVv9hhyJu6IIQztnXOlDOagHkffoWweFPRGF92gjT6so60M-sQ1M3rkG4JtWrhCqY4RnIFGC-YCqZ11cvdZ9W5nkysl5b_3crkSVjObAVD-oq07wnziRLWSCUCQz2l8WDDke_q29fOxSoLv9vJuki-n3zedm2MF6js6WGFBAkwLy9CRfxCFmlpaYUsdfSdAzTeyk");'>
+            <p class="text-white text-xs font-bold leading-tight uppercase tracking-tighter">Brass Studies</p>
+            <p class="text-primary text-[10px] font-mono">3D RENDERING</p>
+        </div>
+    </div>
+    <div class="col-span-1">
+        <div class="rounded-xl h-64 bg-cover bg-center border border-primary/30 flex flex-col justify-end p-4 overflow-hidden relative" style='background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNJ82-uaEJTYmX_3A2nyvXDdni9685Tkaqsn7EhMwjup2oyMny5YWE01kp7UcP6ssy2jARoav7tNjRe6jqVdKc-I3ki_IED_aGslJVYu-FJDe0TfGm8VrEqoxJ-rM0dBZf7_AuIDfUWvxfOlhx4tYKibhmjE9biz2a_RF8IzAs7F6TIbmF8KbPsYN4_OeFW7NC0qgOJWoBndAKB5NpGZRWmLZNIMBwMlIXGGbnw1Nc_4vJH_c-TzICHzOzgTemhi9_4lkYjtQebSg");'>
+            <div class="absolute -top-10 -right-10 w-24 h-24 rounded-full border border-primary/40"></div>
+            <p class="text-white text-xs font-bold leading-tight uppercase tracking-tighter">Brand Identity</p>
+            <p class="text-primary text-[10px] font-mono">VISUAL DESIGN</p>
+        </div>
+    </div>
 </section>
+
 <section class="p-6" id="skills">
-<div class="bg-black/40 border border-primary/30 rounded-xl overflow-hidden shadow-glow">
-<div class="flex items-center justify-between px-4 py-3 bg-white/5 border-b border-primary/10">
-<div class="flex gap-2">
-<div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
-</div>
-<p class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">frontend_lab.js</p>
-</div>
-<div class="p-6 font-mono text-sm overflow-x-auto">
+    <div class="bg-black/40 border border-primary/30 rounded-xl overflow-hidden shadow-glow">
+        <div class="flex items-center justify-between px-4 py-3 bg-white/5 border-b border-primary/10">
+            <div class="flex gap-2">
+                <div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+            </div>
+            <p class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">frontend_lab.js</p>
+        </div>
+        <div class="p-6 font-mono text-sm overflow-x-auto">
 <pre class="text-slate-400"><span class="code-syntax-keyword">const</span> studio = {
   name: <span class="code-syntax-string">'Golden Hour'</span>,
   stack: [<span class="code-syntax-string">'React'</span>, <span class="code-syntax-string">'GLSL'</span>, <span class="code-syntax-string">'Three.js'</span>],
@@ -154,51 +163,56 @@
     radius: <span class="code-syntax-string">1.5</span>
   });
 }</pre>
-</div>
-<div class="p-4 bg-primary/5 border-t border-primary/10 flex justify-between items-center">
-<div class="flex flex-col">
-<span class="text-xs font-bold text-white uppercase tracking-tight">Creative Code</span>
-<span class="text-[10px] text-slate-400">Interactive motion lab</span>
-</div>
-<button class="bg-primary text-background-dark text-[10px] font-black px-3 py-1.5 rounded uppercase tracking-tighter">
-                    Git Repo
-                </button>
-</div>
-</div>
+        </div>
+        <div class="p-4 bg-primary/5 border-t border-primary/10 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-xs font-bold text-white uppercase tracking-tight">Creative Code</span>
+                <span class="text-[10px] text-slate-400">Interactive motion lab</span>
+            </div>
+            <button class="bg-primary text-background-dark text-[10px] font-black px-3 py-1.5 rounded uppercase tracking-tighter">
+                Git Repo
+            </button>
+        </div>
+    </div>
 </section>
+
 <section class="px-6 py-16 text-center" id="contact">
-<div class="inline-flex flex-col items-center">
-<h2 class="font-serif text-3xl text-white mb-6">Have a project in mind?</h2>
-<div class="p-1 rounded-full bg-primary/20 backdrop-blur-xl border border-primary/40 shadow-bloom">
-<button class="bg-primary text-background-dark px-10 py-5 rounded-full font-black text-xl flex items-center gap-3">
-                    Let's Talk
-                    <span class="material-symbols-outlined font-bold">arrow_forward</span>
-</button>
-</div>
-</div>
+    <div class="inline-flex flex-col items-center">
+        <h2 class="font-serif text-3xl text-white mb-6">Have a project in mind?</h2>
+        <div class="p-1 rounded-full bg-primary/20 backdrop-blur-xl border border-primary/40 shadow-bloom">
+            <a href="contact.html" class="bg-primary text-background-dark px-10 py-5 rounded-full font-black text-xl flex items-center gap-3">
+                Let's Talk
+                <span class="material-symbols-outlined font-bold">arrow_forward</span>
+            </a>
+        </div>
+    </div>
 </section>
+
 <footer class="pb-10 pt-4 bg-background-light dark:bg-background-dark border-t border-primary/5">
-<div class="flex justify-around items-center px-6">
-<a class="flex flex-col items-center gap-1 group" href="#">
-<span class="material-symbols-outlined text-primary shadow-bloom rounded-full p-2 bg-primary/10">home</span>
-<span class="text-[10px] font-bold text-primary uppercase">Home</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="#portfolio">
-<span class="material-symbols-outlined">grid_view</span>
-<span class="text-[10px] font-bold uppercase">Work</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="#skills">
-<span class="material-symbols-outlined">terminal</span>
-<span class="text-[10px] font-bold uppercase">Lab</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="Contact.html">
-    <span class="material-symbols-outlined">mail</span>
-    <span class="text-[10px] font-bold uppercase">Contact</span>
-</a>
-</div>
-<div class="text-center mt-10 opacity-30 px-6">
-<p class="text-[9px] font-mono leading-relaxed">©2026 Marybell Venezia Rios. BUILT WITH CODE &amp; SUNLIGHT.</p>
-</div>
+    <div class="flex justify-around items-center px-6">
+        <a class="flex flex-col items-center gap-1 group" href="index.html">
+            <span class="material-symbols-outlined text-primary shadow-bloom rounded-full p-2 bg-primary/10">home</span>
+            <span class="text-[10px] font-bold text-primary uppercase">Home</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="index.html#portfolio">
+            <span class="material-symbols-outlined">grid_view</span>
+            <span class="text-[10px] font-bold uppercase">Work</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="index.html#skills">
+            <span class="material-symbols-outlined">terminal</span>
+            <span class="text-[10px] font-bold uppercase">Lab</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="contact.html">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="text-[10px] font-bold uppercase">Contact</span>
+        </a>
+    </div>
+    <div class="text-center mt-10 opacity-30 px-6">
+        <p class="text-[9px] font-mono leading-relaxed">©2026 Marybell Venezia Rios. BUILT WITH CODE & SUNLIGHT.</p>
+    </div>
 </footer>
 
-</body></html>
+</body>
+</html>
+
+```
