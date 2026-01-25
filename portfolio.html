@@ -22,8 +22,12 @@
 <style type="text/tailwindcss">
     .nav-item-hover:hover { color: #FFC107; text-shadow: 0 0 8px rgba(255, 193, 7, 0.6); }
     body { min-height: max(884px, 100dvh); }
-    /* Hover Lift Effect */
-    .big-button:hover { transform: translateY(-8px) scale(1.02); }
+    
+    /* Standard Button Hover Logic */
+    .std-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+    }
 </style>
 </head>
 
@@ -41,6 +45,60 @@
             <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="portfolio.html">Portfolio</a>
             <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="index.html#skills">Skills</a>
             <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="about.html">About</a>
-            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text
+            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<section class="max-w-xl mx-auto px-6 py-24 flex-grow w-full flex flex-col justify-center">
+    <div class="text-center mb-12">
+        <h1 class="font-serif text-3xl md:text-4xl text-white mb-4">Select Category</h1>
+        <div class="h-1 w-12 bg-primary mx-auto rounded-full"></div>
+    </div>
+
+    <div class="flex flex-col gap-4 w-full max-w-xs mx-auto">
+        
+        <a href="coding.html" class="std-btn h-[44px] flex items-center justify-between px-6 bg-primary/10 border border-primary/40 rounded text-primary hover:bg-primary hover:text-background-dark transition-all duration-300 group">
+            <span class="text-sm font-bold uppercase tracking-widest">Coding</span>
+            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">terminal</span>
+        </a>
+
+        <a href="ux-design.html" class="std-btn h-[44px] flex items-center justify-between px-6 bg-primary/10 border border-primary/40 rounded text-primary hover:bg-primary hover:text-background-dark transition-all duration-300 group">
+            <span class="text-sm font-bold uppercase tracking-widest">UX Design</span>
+            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">design_services</span>
+        </a>
+
+        <a href="3d-design.html" class="std-btn h-[44px] flex items-center justify-between px-6 bg-primary/10 border border-primary/40 rounded text-primary hover:bg-primary hover:text-background-dark transition-all duration-300 group">
+            <span class="text-sm font-bold uppercase tracking-widest">3D & Motion</span>
+            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">view_in_ar</span>
+        </a>
+
+    </div>
+</section>
+
+<footer class="pb-10 pt-4 bg-background-light dark:bg-background-dark border-t border-primary/5 mt-auto">
+    <div class="flex justify-around items-center px-6">
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="index.html">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-bold uppercase">Home</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="portfolio.html">
+            <span class="material-symbols-outlined">grid_view</span>
+            <span class="text-[10px] font-bold uppercase">Work</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="index.html#skills">
+            <span class="material-symbols-outlined">terminal</span>
+            <span class="text-[10px] font-bold uppercase">Lab</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="contact.html">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="text-[10px] font-bold uppercase">Contact</span>
+        </a>
+    </div>
+    <div class="text-center mt-10 opacity-30 px-6">
+        <p class="text-[9px] font-mono leading-relaxed">©2026 Marybell Venezia Rios. BUILT WITH CODE & SUNLIGHT.</p>
+    </div>
+</footer>
+
 </body>
 </html>
