@@ -35,7 +35,6 @@
             </div>
             <h2 class="text-lg font-bold tracking-tight group-hover:text-primary transition-colors">MVR</h2>
         </a>
-
         <div class="flex items-center gap-4 md:gap-8 ml-auto">
             <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="portfolio.html">Portfolio</a>
             <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="skills.html">Skills</a>
@@ -44,6 +43,7 @@
         </div>
     </div>
 </nav>
+
 <section class="max-w-4xl mx-auto px-6 pt-16 pb-10 text-center">
     <h1 class="font-serif text-4xl md:text-5xl text-white mb-6">Let's Connect</h1>
     <p class="text-slate-400 max-w-lg mx-auto">Have a project in mind? I'm always open to discussing new opportunities in UX Engineering.</p>
@@ -86,19 +86,19 @@
                 </div>
             </div>
 
-            <div class="relative w-full h-48 rounded-xl overflow-hidden border border-primary/20">
-                <img src="https://images.unsplash.com/photo-1572576352353-8472f8832a89?q=80&w=1000&auto=format&fit=crop" 
-                     alt="Map of Location" 
+            <div class="relative w-full h-64 rounded-xl overflow-hidden border border-primary/20 bg-gray-800">
+                <img src="https://images.unsplash.com/photo-1549608276-5786777e6587?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Map of San Diego" 
                      class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity">
                 <div class="absolute bottom-2 right-2 bg-black/80 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase">San Diego, CA</div>
             </div>
 
             <div class="grid grid-cols-2 gap-4">
                 <div class="h-32 rounded-xl overflow-hidden border border-white/5">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop" alt="Digital Workspace" class="w-full h-full object-cover opacity-60">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop" alt="Digital Workspace" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity">
                 </div>
                 <div class="h-32 rounded-xl overflow-hidden border border-white/5">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=400&auto=format&fit=crop" alt="Technology Abstract" class="w-full h-full object-cover opacity-60">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=400&auto=format&fit=crop" alt="Technology Abstract" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity">
                 </div>
             </div>
         </div>
@@ -106,7 +106,34 @@
 </section>
 
 <footer class="bg-background-light dark:bg-background-dark border-t border-primary/5 mt-auto">
-    </footer>
+    <div class="flex justify-around items-center px-6 pt-4 pb-4">
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="index.html">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-bold uppercase">Home</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="portfolio.html">
+            <span class="material-symbols-outlined">grid_view</span>
+            <span class="text-[10px] font-bold uppercase">Work</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="skills.html">
+            <span class="material-symbols-outlined">terminal</span>
+            <span class="text-[10px] font-bold uppercase">Lab</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="contact.html">
+            <span class="material-symbols-outlined">mail</span>
+            <span class="text-[10px] font-bold uppercase">Contact</span>
+        </a>
+    </div>
+    <div class="flex flex-col items-center justify-center py-6 border-t border-primary/5 bg-primary/5">
+        <div class="flex items-center gap-6 mb-4">
+            <a href="#" class="text-slate-500 hover:text-primary transition-colors"><span class="text-xs font-bold uppercase tracking-widest">LinkedIn</span></a>
+            <a href="#" class="text-slate-500 hover:text-primary transition-colors"><span class="text-xs font-bold uppercase tracking-widest">GitHub</span></a>
+            <a href="#" class="text-slate-500 hover:text-primary transition-colors"><span class="text-xs font-bold uppercase tracking-widest">Instagram</span></a>
+        </div>
+        <h3 class="text-xl font-bold tracking-tight text-slate-300">MVR</h3>
+        <p class="text-[9px] font-mono leading-relaxed text-slate-500 mt-2">©2026 Marybell Venezia Rios.</p>
+    </div>
+</footer>
 
 </body>
 </html>
