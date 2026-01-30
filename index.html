@@ -3,63 +3,34 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Golden Hour Studio Home</title>
+<title>Home - Golden Hour Studio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
     tailwind.config = {
         darkMode: "class",
         theme: {
             extend: {
-                colors: {
-                    "primary": "#FFC107",
-                    "background-light": "#f8f8f5",
-                    "background-dark": "#2A2826",
-                },
-                fontFamily: {
-                    "display": ["Plus Jakarta Sans", "sans-serif"],
-                    "nav": ["Plus Jakarta Sans", "sans-serif"], 
-                    "serif": ["Playfair Display", "serif"],
-                    "mono": ["JetBrains Mono", "monospace"]
-                },
-                borderRadius: {
-                    "DEFAULT": "0.5rem",
-                    "lg": "1rem",
-                    "xl": "1.5rem",
-                    "full": "9999px"
-                },
-                boxShadow: {
-                    'glow': '0 0 15px -3px rgba(255, 193, 7, 0.4)',
-                    'bloom': '0 0 25px 2px rgba(255, 193, 7, 0.5)',
-                    'nav-hover': '0 0 12px 2px rgba(255, 193, 7, 0.4)',
-                }
+                colors: { "primary": "#FFC107", "background-light": "#f8f8f5", "background-dark": "#2A2826" },
+                fontFamily: { "display": ["Plus Jakarta Sans", "sans-serif"], "nav": ["Plus Jakarta Sans", "sans-serif"], "serif": ["Playfair Display", "serif"], "mono": ["JetBrains Mono", "monospace"] },
+                boxShadow: { 'glow': '0 0 15px -3px rgba(255, 193, 7, 0.4)', 'bloom': '0 0 25px 2px rgba(255, 193, 7, 0.5)' }
             },
         },
     }
 </script>
 <style type="text/tailwindcss">
-    .arch-mask {
-        border-top-left-radius: 1000px;
-        border-top-right-radius: 1000px;
-    }
-    .bloom-effect:hover {
-        box-shadow: 0 0 20px 2px rgba(255, 193, 7, 0.6);
-    }
-    .nav-item-hover:hover {
-        color: #FFC107;
-        text-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
-    }
-    .code-syntax-string { color: #FFC107; }
-    .code-syntax-keyword { color: #d4d4d4; font-weight: bold; }
-    .code-syntax-comment { color: #6a6a6a; }
-    body {
-        min-height: max(884px, 100dvh);
-    }
+    .nav-item-hover:hover { color: #FFC107; text-shadow: 0 0 8px rgba(255, 193, 7, 0.6); }
+    body { min-height: max(884px, 100dvh); }
+    .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased">
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased flex flex-col min-h-screen">
 
 <nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
     <div class="flex items-center justify-between px-4 py-4 max-w-7xl mx-auto">
@@ -69,7 +40,6 @@
             </div>
             <h2 class="text-lg font-bold tracking-tight group-hover:text-primary transition-colors">MVR</h2>
         </a>
-
         <div class="flex items-center gap-4 md:gap-8 ml-auto">
             <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="portfolio.html">Portfolio</a>
             <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="skills.html">Skills</a>
@@ -79,106 +49,67 @@
     </div>
 </nav>
 
-<section class="max-w-4xl mx-auto px-6 py-20 md:py-32 flex flex-col items-start justify-center min-h-[60vh]">
-    <span class="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-4 animate-fade-in-up">UX Engineer & Digital Designer</span>
-    <h1 class="font-serif text-5xl md:text-7xl text-white mb-6 leading-tight animate-fade-in-up delay-100">
+<section class="max-w-4xl mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-[70vh] text-center">
+    
+    <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-primary/20 mb-8 shadow-glow animate-fade-in-up">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" 
+             alt="Profile Photo" 
+             class="w-full h-full object-cover">
+    </div>
+
+    <span class="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-4 animate-fade-in-up delay-100">UX Engineer & Digital Designer</span>
+    <h1 class="font-serif text-5xl md:text-6xl text-white mb-6 leading-tight animate-fade-in-up delay-200">
         Designing with <br/>
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-200">Empathy & Code.</span>
     </h1>
-    <p class="text-slate-400 max-w-lg text-lg mb-10 leading-relaxed animate-fade-in-up delay-200">
+    <p class="text-slate-400 max-w-lg text-lg mb-10 leading-relaxed animate-fade-in-up delay-300">
         I bridge the gap between human needs and technical possibility, creating accessible digital experiences that feel natural.
     </p>
     
-    <div class="flex flex-wrap gap-4 animate-fade-in-up delay-300">
-        <a href="portfolio.html" class="bg-primary text-background-dark px-8 py-3 rounded-full font-bold uppercase tracking-wider text-xs hover:bg-white transition-all duration-300 shadow-glow hover:scale-105">
+    <div class="animate-fade-in-up delay-300">
+        <a href="portfolio.html" class="bg-primary text-background-dark px-10 py-4 rounded-full font-bold uppercase tracking-wider text-xs hover:bg-white transition-all duration-300 shadow-glow hover:scale-105 inline-block">
             View Profile
         </a>
-        
-        <a href="contact.html" class="border border-slate-600 text-slate-300 px-8 py-3 rounded-full font-bold uppercase tracking-wider text-xs hover:border-primary hover:text-primary transition-all duration-300">
-            Contact Me
+    </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 pb-20">
+    <div class="flex items-center justify-between mb-8 border-b border-primary/10 pb-4">
+        <h2 class="font-serif text-2xl text-white">Selected Work</h2>
+        <a href="portfolio.html" class="text-primary text-xs font-bold uppercase tracking-widest hover:text-white transition-colors">View All</a>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+        <a href="coding.html" class="group block relative rounded-xl overflow-hidden aspect-[4/3]">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop");'></div>
+            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
+            <div class="absolute bottom-4 left-4">
+                <p class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1">Coding</p>
+                <h3 class="text-white font-serif text-xl">Immersive Web</h3>
+            </div>
         </a>
-    </div>
-</section>
-<div class="px-6 flex items-center justify-between mb-2">
-    <h3 class="text-primary text-sm font-bold uppercase tracking-[0.2em]">Selected Works</h3>
-    <div class="h-[1px] flex-1 bg-primary/20 ml-4"></div>
-</div>
 
-<section class="p-6 grid grid-cols-2 gap-4" id="portfolio">
-    <div class="col-span-2 group">
-        <div class="relative rounded-xl overflow-hidden border-2 border-primary/20 hover:border-primary transition-all duration-500 shadow-glow aspect-[16/9]" style='background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBc4qA1_3sBxs4Ud7cxAxjP54dPbUaf11RQlqVJi_fZgMWtcgQ9N88vFIP2CLlIz9wSO8-McOZGQwpnPtV1F49eEZtw7OxSLhEbMq4E_578qEuulLv_2mirypEc9RZKfcq8EaAe8OJ8GVNcQj6qUSKECtoFtlNE5wi_W1aMuS-IreThNO43anjSY2mD9kwNOnR5forxK1krrhBMqRRf5EGkWlITgaVM3W6x87Wrb9iFaOImJJLoDnQpoCBW58B24Xe8Fcih-8pbFWM"); background-size: cover;'>
-            <div class="absolute bottom-0 left-0 p-6 w-full">
-                <p class="text-xs font-bold text-primary mb-1 uppercase tracking-widest">UX ARCHITECTURE</p>
-                <h4 class="text-2xl font-bold text-white mb-2">Fintech Flow</h4>
-                <p class="text-slate-300 text-sm line-clamp-2">Optimizing digital banking through human-centered motion design and accessibility.</p>
+        <a href="ux-design.html" class="group block relative rounded-xl overflow-hidden aspect-[4/3]">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://images.unsplash.com/photo-1586717791821-3f44a5638d48?q=80&w=600&auto=format&fit=crop");'></div>
+            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
+            <div class="absolute bottom-4 left-4">
+                <p class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1">UX Design</p>
+                <h3 class="text-white font-serif text-xl">Finance App Research</h3>
             </div>
-        </div>
-    </div>
-    <div class="col-span-1">
-        <div class="arch-mask h-64 bg-cover bg-center border border-primary/30 flex flex-col justify-end p-4 group overflow-hidden" style='background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzME6L26ynCLM9KDBEAkpFAM8sxLl2qiiqflTIkHiGIR_glZd2NWvQgZBjpA8jlUGpk-XzyGRZVv9hhyJu6IIQztnXOlDOagHkffoWweFPRGF92gjT6so60M-sQ1M3rkG4JtWrhCqY4RnIFGC-YCqZ11cvdZ9W5nkysl5b_3crkSVjObAVD-oq07wnziRLWSCUCQz2l8WDDke_q29fOxSoLv9vJuki-n3zedm2MF6js6WGFBAkwLy9CRfxCFmlpaYUsdfSdAzTeyk");'>
-            <p class="text-white text-xs font-bold leading-tight uppercase tracking-tighter">Brass Studies</p>
-            <p class="text-primary text-[10px] font-mono">3D RENDERING</p>
-        </div>
-    </div>
-    <div class="col-span-1">
-        <div class="rounded-xl h-64 bg-cover bg-center border border-primary/30 flex flex-col justify-end p-4 overflow-hidden relative" style='background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNJ82-uaEJTYmX_3A2nyvXDdni9685Tkaqsn7EhMwjup2oyMny5YWE01kp7UcP6ssy2jARoav7tNjRe6jqVdKc-I3ki_IED_aGslJVYu-FJDe0TfGm8VrEqoxJ-rM0dBZf7_AuIDfUWvxfOlhx4tYKibhmjE9biz2a_RF8IzAs7F6TIbmF8KbPsYN4_OeFW7NC0qgOJWoBndAKB5NpGZRWmLZNIMBwMlIXGGbnw1Nc_4vJH_c-TzICHzOzgTemhi9_4lkYjtQebSg");'>
-            <div class="absolute -top-10 -right-10 w-24 h-24 rounded-full border border-primary/40"></div>
-            <p class="text-white text-xs font-bold leading-tight uppercase tracking-tighter">Brand Identity</p>
-            <p class="text-primary text-[10px] font-mono">VISUAL DESIGN</p>
-        </div>
-    </div>
-</section>
+        </a>
 
-<section class="p-6" id="skills">
-    <div class="bg-black/40 border border-primary/30 rounded-xl overflow-hidden shadow-glow">
-        <div class="flex items-center justify-between px-4 py-3 bg-white/5 border-b border-primary/10">
-            <div class="flex gap-2">
-                <div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
-                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
-                <div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
+        <a href="3d-design.html" class="group block relative rounded-xl overflow-hidden aspect-[4/3]">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop");'></div>
+            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
+            <div class="absolute bottom-4 left-4">
+                <p class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1">3D & Motion</p>
+                <h3 class="text-white font-serif text-xl">Abstract Renders</h3>
             </div>
-            <p class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">frontend_lab.js</p>
-        </div>
-        <div class="p-6 font-mono text-sm overflow-x-auto">
-<pre class="text-slate-400"><span class="code-syntax-keyword">const</span> studio = {
-  name: <span class="code-syntax-string">'Golden Hour'</span>,
-  stack: [<span class="code-syntax-string">'React'</span>, <span class="code-syntax-string">'GLSL'</span>, <span class="code-syntax-string">'Three.js'</span>],
-  focus: <span class="code-syntax-string">'High-perf creative'</span>
-};
-<span class="code-syntax-comment">// Luminous animation logic</span>
-<span class="code-syntax-keyword">function</span> <span class="code-syntax-keyword">renderBloom</span>(intensity) {
-  <span class="code-syntax-keyword">return</span> <span class="code-syntax-keyword">new</span> BloomPass({
-    threshold: <span class="code-syntax-string">0.85</span>,
-    radius: <span class="code-syntax-string">1.5</span>
-  });
-}</pre>
-        </div>
-        <div class="p-4 bg-primary/5 border-t border-primary/10 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-xs font-bold text-white uppercase tracking-tight">Creative Code</span>
-                <span class="text-[10px] text-slate-400">Interactive motion lab</span>
-            </div>
-            <button class="bg-primary text-background-dark text-[10px] font-black px-3 py-1.5 rounded uppercase tracking-tighter">
-                Git Repo
-            </button>
-        </div>
-    </div>
-</section>
-
-<section class="px-6 py-16 text-center" id="contact">
-    <div class="inline-flex flex-col items-center">
-        <h2 class="font-serif text-3xl text-white mb-6">Have a project in mind?</h2>
-        <div class="p-1 rounded-full bg-primary/20 backdrop-blur-xl border border-primary/40 shadow-bloom">
-            <a href="contact.html" class="bg-primary text-background-dark px-10 py-5 rounded-full font-black text-xl flex items-center gap-3">
-                Let's Talk
-                <span class="material-symbols-outlined font-bold">arrow_forward</span>
-            </a>
-        </div>
+        </a>
     </div>
 </section>
 
 <footer class="bg-background-light dark:bg-background-dark border-t border-primary/5 mt-auto">
-    
     <div class="flex justify-around items-center px-6 pt-4 pb-4">
         <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="index.html">
             <span class="material-symbols-outlined">home</span>
@@ -197,27 +128,16 @@
             <span class="text-[10px] font-bold uppercase">Contact</span>
         </a>
     </div>
-
     <div class="flex flex-col items-center justify-center py-6 border-t border-primary/5 bg-primary/5">
         <div class="flex items-center gap-6 mb-4">
-            <a href="#" class="text-slate-500 hover:text-primary transition-colors">
-                <span class="text-xs font-bold uppercase tracking-widest">LinkedIn</span>
-            </a>
-            <a href="#" class="text-slate-500 hover:text-primary transition-colors">
-                <span class="text-xs font-bold uppercase tracking-widest">GitHub</span>
-            </a>
-            <a href="#" class="text-slate-500 hover:text-primary transition-colors">
-                <span class="text-xs font-bold uppercase tracking-widest">Instagram</span>
-            </a>
+            <a href="#" class="text-slate-500 hover:text-primary transition-colors"><span class="text-xs font-bold uppercase tracking-widest">LinkedIn</span></a>
+            <a href="#" class="text-slate-500 hover:text-primary transition-colors"><span class="text-xs font-bold uppercase tracking-widest">GitHub</span></a>
+            <a href="#" class="text-slate-500 hover:text-primary transition-colors"><span class="text-xs font-bold uppercase tracking-widest">Instagram</span></a>
         </div>
-        
         <h3 class="text-xl font-bold tracking-tight text-slate-300">MVR</h3>
-        
         <p class="text-[9px] font-mono leading-relaxed text-slate-500 mt-2">©2026 Marybell Venezia Rios.</p>
     </div>
 </footer>
 
 </body>
 </html>
-
-```
