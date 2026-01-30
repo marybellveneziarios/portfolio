@@ -12,23 +12,9 @@
         darkMode: "class",
         theme: {
             extend: {
-                colors: {
-                    "primary": "#FFC107",
-                    "background-light": "#f8f8f5",
-                    "background-dark": "#2A2826",
-                },
-                fontFamily: {
-                    "display": ["Plus Jakarta Sans", "sans-serif"],
-                    "nav": ["Plus Jakarta Sans", "sans-serif"], 
-                    "serif": ["Playfair Display", "serif"],
-                    "mono": ["JetBrains Mono", "monospace"]
-                },
-                borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
-                boxShadow: {
-                    'glow': '0 0 15px -3px rgba(255, 193, 7, 0.4)',
-                    'bloom': '0 0 25px 2px rgba(255, 193, 7, 0.5)',
-                    'nav-hover': '0 0 12px 2px rgba(255, 193, 7, 0.4)',
-                }
+                colors: { "primary": "#FFC107", "background-light": "#f8f8f5", "background-dark": "#2A2826" },
+                fontFamily: { "display": ["Plus Jakarta Sans", "sans-serif"], "nav": ["Plus Jakarta Sans", "sans-serif"], "serif": ["Playfair Display", "serif"], "mono": ["JetBrains Mono", "monospace"] },
+                boxShadow: { 'glow': '0 0 15px -3px rgba(255, 193, 7, 0.4)', 'bloom': '0 0 25px 2px rgba(255, 193, 7, 0.5)' }
             },
         },
     }
@@ -36,11 +22,6 @@
 <style type="text/tailwindcss">
     .nav-item-hover:hover { color: #FFC107; text-shadow: 0 0 8px rgba(255, 193, 7, 0.6); }
     body { min-height: max(884px, 100dvh); }
-    
-    /* Custom styles for the Glass Inputs */
-    .input-glass {
-        @apply bg-white/5 border border-white/10 text-white placeholder-slate-500 rounded-lg px-4 py-3 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all duration-300 w-full font-mono text-sm;
-    }
 </style>
 </head>
 
@@ -55,100 +36,77 @@
             <h2 class="text-lg font-bold tracking-tight group-hover:text-primary transition-colors">MVR</h2>
         </a>
         <div class="flex items-center gap-4 md:gap-8 ml-auto">
-            <a class="text-[11px]..." href="portfolio.html">Portfolio</a>
-<a class="text-[11px]..." href="skills.html">Skills</a>
+            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="portfolio.html">Portfolio</a>
+            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="skills.html">Skills</a>
             <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="about.html">About</a>
-            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-primary nav-item-hover transition-all duration-300 shadow-glow" href="contact.html">Contact</a>
+            <a class="text-[11px] font-nav font-bold uppercase tracking-wider text-slate-400 nav-item-hover transition-all duration-300" href="contact.html">Contact</a>
         </div>
     </div>
 </nav>
 
-<section class="max-w-4xl mx-auto px-6 py-16 flex-grow flex flex-col justify-center w-full">
-    <div class="text-center mb-12">
-        <span class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-2 block">Inquiries</span>
-        <h1 class="font-serif text-4xl md:text-5xl text-white mb-4">Let's Create Together</h1>
-        <p class="text-slate-400 max-w-lg mx-auto">Available for freelance opportunities and full-time roles.</p>
-    </div>
+<section class="max-w-4xl mx-auto px-6 pt-16 pb-10 text-center">
+    <h1 class="font-serif text-4xl md:text-5xl text-white mb-6">Let's Connect</h1>
+    <p class="text-slate-400 max-w-lg mx-auto">Have a project in mind? I'm always open to discussing new opportunities in UX Engineering.</p>
+</section>
 
-    <div class="bg-black/40 border border-primary/20 rounded-xl p-8 shadow-glow backdrop-blur-md relative overflow-hidden">
-        <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 blur-[60px] rounded-full pointer-events-none"></div>
-
-        <form action="#" class="space-y-6 relative z-10">
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="space-y-2">
-                    <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Your Name</label>
-                    <input type="text" class="input-glass" placeholder="Jane Doe">
+<section class="max-w-6xl mx-auto px-6 pb-20">
+    <div class="grid md:grid-cols-2 gap-12">
+        
+        <div class="bg-black/20 border border-primary/20 rounded-xl p-8">
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-primary mb-2">Name</label>
+                    <input type="text" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Your Name">
                 </div>
-                <div class="space-y-2">
-                    <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Email Address</label>
-                    <input type="email" class="input-glass" placeholder="jane@example.com">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-primary mb-2">Email</label>
+                    <input type="email" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="hello@example.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-primary mb-2">Subject</label>
+                    <input type="text" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Project Inquiry">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-primary mb-2">Message</label>
+                    <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Tell me about your project..."></textarea>
+                </div>
+                <button class="w-full bg-primary text-background-dark font-bold uppercase tracking-widest py-4 rounded-lg hover:bg-white transition-colors shadow-bloom">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <div class="space-y-8">
+            <div>
+                <h3 class="font-serif text-2xl text-white mb-4">Contact Info</h3>
+                <div class="space-y-2 text-slate-400">
+                    <p>San Diego, CA</p>
+                    <p>email@marybellvenezia.com</p>
+                    <p>(555) 123-4567</p>
                 </div>
             </div>
-            
-            <div class="space-y-2">
-                <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Project Details</label>
-                <textarea rows="4" class="input-glass" placeholder="Tell me about your vision..."></textarea>
+
+            <div class="relative w-full h-48 rounded-xl overflow-hidden border border-primary/20">
+                <img src="https://images.unsplash.com/photo-1572576352353-8472f8832a89?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Map of Location" 
+                     class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity">
+                <div class="absolute bottom-2 right-2 bg-black/80 text-primary text-[10px] px-2 py-1 rounded font-bold uppercase">San Diego, CA</div>
             </div>
 
-            <button type="submit" class="w-full bg-primary text-background-dark py-4 rounded-lg font-bold text-lg hover:scale-[1.01] hover:shadow-bloom transition-all duration-300 flex items-center justify-center gap-2">
-                Send Message
-                <span class="material-symbols-outlined text-sm">send</span>
-            </button>
-        </form>
-    </div>
-
-    <div class="mt-12 flex justify-center gap-8 border-t border-primary/10 pt-8">
-        <a href="#" class="text-slate-500 hover:text-primary transition-colors flex items-center gap-2 text-xs font-mono uppercase tracking-wider">
-            <span class="material-symbols-outlined text-lg">mail</span> Email
-        </a>
-        <a href="#" class="text-slate-500 hover:text-primary transition-colors flex items-center gap-2 text-xs font-mono uppercase tracking-wider">
-            <span class="material-symbols-outlined text-lg">code</span> GitHub
-        </a>
-        <a href="#" class="text-slate-500 hover:text-primary transition-colors flex items-center gap-2 text-xs font-mono uppercase tracking-wider">
-            <span class="material-symbols-outlined text-lg">share</span> LinkedIn
-        </a>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="h-32 rounded-xl overflow-hidden border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop" alt="Digital Workspace" class="w-full h-full object-cover opacity-60">
+                </div>
+                <div class="h-32 rounded-xl overflow-hidden border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=400&auto=format&fit=crop" alt="Technology Abstract" class="w-full h-full object-cover opacity-60">
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <footer class="bg-background-light dark:bg-background-dark border-t border-primary/5 mt-auto">
-    
-    <div class="flex justify-around items-center px-6 pt-4 pb-4">
-        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="index.html">
-            <span class="material-symbols-outlined">home</span>
-            <span class="text-[10px] font-bold uppercase">Home</span>
-        </a>
-        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="portfolio.html">
-            <span class="material-symbols-outlined">grid_view</span>
-            <span class="text-[10px] font-bold uppercase">Work</span>
-        </a>
-        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="skills.html">
-            <span class="material-symbols-outlined">terminal</span>
-            <span class="text-[10px] font-bold uppercase">Lab</span>
-        </a>
-        <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors" href="contact.html">
-            <span class="material-symbols-outlined">mail</span>
-            <span class="text-[10px] font-bold uppercase">Contact</span>
-        </a>
-    </div>
-
-    <div class="flex flex-col items-center justify-center py-6 border-t border-primary/5 bg-primary/5">
-        <div class="flex items-center gap-6 mb-4">
-            <a href="#" class="text-slate-500 hover:text-primary transition-colors">
-                <span class="text-xs font-bold uppercase tracking-widest">LinkedIn</span>
-            </a>
-            <a href="#" class="text-slate-500 hover:text-primary transition-colors">
-                <span class="text-xs font-bold uppercase tracking-widest">GitHub</span>
-            </a>
-            <a href="#" class="text-slate-500 hover:text-primary transition-colors">
-                <span class="text-xs font-bold uppercase tracking-widest">Instagram</span>
-            </a>
-        </div>
-        
-        <h3 class="text-xl font-bold tracking-tight text-slate-300">MVR</h3>
-        
-        <p class="text-[9px] font-mono leading-relaxed text-slate-500 mt-2">©2026 Marybell Venezia Rios.</p>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
