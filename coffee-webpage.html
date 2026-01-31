@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Coffee is Delicious</title>
+    <style>
+      h1 {
+        text-align: center;
+        background: #e8e051;
+        color: #000000;
+      }
+
+      h2 {
+        text-align: center;
+        border: 1px solid #413204;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 4px;
+      }
+      .heart-text {
+  color: rgb(222, 211, 15);
+  font-weight: bold;}
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      body{ background: linear-gradient(rgb(240, 239, 229), pink);}
+
+      p {
+        line-height: 1.5;
+        font-size: 13px;
+        margin: 20px 0 10px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #e8e051;
+        color: rgb(53, 51, 51);
+        font-size: 18px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+      }
+
+      .learn-more {
+        color: #fcd929;
+        text-decoration: none;
+        font-size: 12px;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <h1>Coffee is <strong>Delicious</strong></h1>
+      <h2><em>Try our coffee</em></h2>
+      <img
+        src="https://www.brighteyedbaker.com/wp-content/uploads/2024/07/Dulce-de-Leche-Latte-with-Whipped-Cream.jpg"
+        alt="latte"
+      />
+      <p>
+        We make the best <span class="heart-text">coffee</span> in town. Our coffee is made from the finest beans
+        and brewed to perfection. Whether you like it hot or iced, we have a
+        variety of options to satisfy your coffee cravings.
+      </p>
+      
+      <a
+        href="https://en.wikipedia.org/wiki/Coffee"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more on Wikipedia
+      </a>
+      <br>
+      
+      <button class="buy-button">👉 Buy Coffee</button>
+      <p class="footer">
+        <hr>
+        This page was built by
+        <a href="MaveArtistry.com" target="_blank"> Marybell Venezia Rios </a>
+      </p>
+    </div>
+    <script>
+      function buyCoffee() {
+        // 1. Ask the user for their name
+        let name = prompt("What is your name?");
+
+        // 2. Check logic (IF they typed a name vs ELSE if they cancelled)
+        if (name) {
+          alert("Thank you, " + name + "! Your coffee is being brewed. ☕️");
+        } else {
+          alert("No name? No problem! Enjoy your coffee anyway! ☕️");
+        }
+      }
+
+      // 3. Select the button element
+      let button = document.querySelector(".buy-button");
+
+      // 4. Add the EVENT listener
+      button.addEventListener("click", buyCoffee);
+    </script>
+  </body>
+</html>
